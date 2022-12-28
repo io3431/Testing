@@ -1,0 +1,36 @@
+﻿<Window x:Class="DesktopAuth.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesktopAuth"
+        mc:Ignorable="d"
+        Title="MainWindow" MinHeight="450" MinWidth="800" Height="450" Width="800">
+    <Grid>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <StackPanel Orientation="Horizontal" Margin="0 0 0 20">
+                <TextBlock Text="Телеком Нева Связь" FontFamily="Arial" FontSize="20" Margin="0 0 200 0" VerticalAlignment="Center"/>
+                <Image Source="/Resources/Logo.jpg" Width="197" Height="166" VerticalAlignment="Top" HorizontalAlignment="Right"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 10">
+                <TextBlock Text="Номер" FontFamily="Arial" Margin="0 0 10 0"/>
+                <TextBox x:Name="NumberBx" Width="200" KeyUp="NumberBx_KeyUp"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 10">
+                <TextBlock Text="Пароль" FontFamily="Arial" Margin="0 0 10 0"/>
+                <PasswordBox x:Name="PasswordBx" Width="200" KeyUp="PasswordBx_KeyUp"/>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center" Margin="0 0 0 20">
+                <TextBlock Text="Код" FontFamily="Arial" Margin="0 0 10 0"/>
+                <TextBox Name="CodeBx" Width="200" Margin="0 0 10 0" KeyUp="CodeBx_KeyUp"/>
+                <Button Name="RefreshBtn" Height="19" RenderTransformOrigin="0.5,0.5" Width="20" Background="White" Click="RefreshBtn_Click">
+                    <Image Source="/Resources/Refresh.jpg" />
+                </Button>
+            </StackPanel>
+            <StackPanel Orientation="Horizontal" HorizontalAlignment="Center">
+                <Button x:Name="CancelBtn" Content="Отмена" Width="60" Padding="3" Margin="0 0 100 0" Click="CancelBtn_Click"/>
+                <Button x:Name="InputBtn" Content="Вход" Width="60" Padding="3" Click="InputBtn_Click"/>
+            </StackPanel>
+        </StackPanel>
+    </Grid>
+</Window>
